@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIElements2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eED-1k-5WA">
+                                <rect key="frame" x="16" y="36" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="q8g-l2-nJ1">
+                                <rect key="frame" x="265" y="28" width="94" height="29"/>
+                                <connections>
+                                    <action selector="sizeFontChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HBM-zP-8ny"/>
+                                </connections>
+                            </stepper>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Pu-y8-nqh">
+                                <rect key="frame" x="16" y="65" width="343" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate fermentum elit, faucibus bibendum metus sollicitudin eget. Nam blandit ullamcorper tincidunt. Donec nec facilisis eros. Suspendisse in commodo nisi, in sodales diam. Pellentesque mi quam, iaculis et nulla eu, pretium vestibulum orci. Curabitur molestie lorem quis ullamcorper hendrerit. Nunc lacinia purus magna.
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Pu-y8-nqh" secondAttribute="bottom" constant="119" id="4tZ-k7-cdF"/>
+                            <constraint firstItem="3Pu-y8-nqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6J1-37-nuL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q8g-l2-nJ1" secondAttribute="trailing" constant="16" id="Cjf-7Q-VXL"/>
+                            <constraint firstItem="eED-1k-5WA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LGG-oI-2Sg"/>
+                            <constraint firstItem="q8g-l2-nJ1" firstAttribute="leading" secondItem="eED-1k-5WA" secondAttribute="trailing" constant="8" id="Phc-ki-CuG"/>
+                            <constraint firstItem="3Pu-y8-nqh" firstAttribute="top" secondItem="eED-1k-5WA" secondAttribute="bottom" constant="8" id="Sa1-53-pKu"/>
+                            <constraint firstItem="eED-1k-5WA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xzf-P2-vSo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Pu-y8-nqh" secondAttribute="trailing" constant="16" id="ios-Cr-KZu"/>
+                            <constraint firstItem="q8g-l2-nJ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oiE-bG-iRU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="4tZ-k7-cdF" id="8oK-QW-JPi"/>
+                        <outlet property="label" destination="eED-1k-5WA" id="VfG-fC-wKM"/>
+                        <outlet property="stepper" destination="q8g-l2-nJ1" id="65d-eq-xVa"/>
+                        <outlet property="textView" destination="3Pu-y8-nqh" id="5Wh-KB-jVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
