@@ -30,6 +30,12 @@
                                     <action selector="sizeFontChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HBM-zP-8ny"/>
                                 </connections>
                             </stepper>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="m3K-wo-L5F">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fc1-OS-Swc">
+                                <rect key="frame" x="16" y="65" width="343" height="2"/>
+                            </progressView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Pu-y8-nqh">
                                 <rect key="frame" x="16" y="65" width="343" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,19 +50,27 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Pu-y8-nqh" secondAttribute="bottom" constant="119" id="4tZ-k7-cdF"/>
                             <constraint firstItem="3Pu-y8-nqh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6J1-37-nuL"/>
+                            <constraint firstItem="m3K-wo-L5F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Awh-Qa-5Om"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q8g-l2-nJ1" secondAttribute="trailing" constant="16" id="Cjf-7Q-VXL"/>
+                            <constraint firstItem="m3K-wo-L5F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="KVx-lG-5ae"/>
                             <constraint firstItem="eED-1k-5WA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="LGG-oI-2Sg"/>
                             <constraint firstItem="q8g-l2-nJ1" firstAttribute="leading" secondItem="eED-1k-5WA" secondAttribute="trailing" constant="8" id="Phc-ki-CuG"/>
                             <constraint firstItem="3Pu-y8-nqh" firstAttribute="top" secondItem="eED-1k-5WA" secondAttribute="bottom" constant="8" id="Sa1-53-pKu"/>
+                            <constraint firstItem="fc1-OS-Swc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UcV-E9-vzS"/>
                             <constraint firstItem="eED-1k-5WA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xzf-P2-vSo"/>
+                            <constraint firstItem="m3K-wo-L5F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aLm-GH-hrE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Pu-y8-nqh" secondAttribute="trailing" constant="16" id="ios-Cr-KZu"/>
                             <constraint firstItem="q8g-l2-nJ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oiE-bG-iRU"/>
+                            <constraint firstItem="fc1-OS-Swc" firstAttribute="top" secondItem="eED-1k-5WA" secondAttribute="bottom" constant="8" id="qu3-Ej-dun"/>
+                            <constraint firstItem="fc1-OS-Swc" firstAttribute="width" secondItem="3Pu-y8-nqh" secondAttribute="width" id="upn-2y-E7B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="m3K-wo-L5F" id="ayi-8c-jbK"/>
                         <outlet property="bottomConstraint" destination="4tZ-k7-cdF" id="8oK-QW-JPi"/>
                         <outlet property="label" destination="eED-1k-5WA" id="VfG-fC-wKM"/>
+                        <outlet property="progressView" destination="fc1-OS-Swc" id="AJU-fz-W32"/>
                         <outlet property="stepper" destination="q8g-l2-nJ1" id="65d-eq-xVa"/>
                         <outlet property="textView" destination="3Pu-y8-nqh" id="5Wh-KB-jVR"/>
                     </connections>
